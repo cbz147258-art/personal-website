@@ -2,7 +2,8 @@
 import vue from "@vitejs/plugin-vue"
 import UnoCSS from "unocss/vite"
 
-export default defineConfig({
-  plugins: [vue(), UnoCSS()],
-})
+import { cloudflare } from "@cloudflare/vite-plugin";
 
+export default defineConfig({
+  plugins: [vue(), UnoCSS(), cloudflare()],
+})

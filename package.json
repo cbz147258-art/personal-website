@@ -6,12 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "vue": "^3.5.34"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.40.0",
     "@types/node": "^24.12.3",
     "@unocss/reset": "^66.7.0",
     "@vitejs/plugin-vue": "^6.0.6",
@@ -20,6 +22,7 @@
     "typescript": "~6.0.2",
     "unocss": "^66.7.0",
     "vite": "^8.0.12",
-    "vue-tsc": "^3.2.8"
+    "vue-tsc": "^3.2.8",
+    "wrangler": "^4.98.0"
   }
 }
