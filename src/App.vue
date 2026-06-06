@@ -359,3 +359,10 @@ onUnmounted(() => {
     </footer>
   </div>
 </template>
+
+<style scoped>
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
